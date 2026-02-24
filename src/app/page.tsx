@@ -444,14 +444,14 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {[
-                { title: "باقة الاسترخاء الملكي", price: "222 ريال", items: ["حمام مغربي ملكي", "جلسة مساج للاسترخاء", "سيشوار للشعر"], img: "/images/IMG_6540.jpg", wa: "https://wa.me/966506866088?text=مرحباً، أرغب بحجز باقة الاسترخاء الملكي (222 ريال)", popular: false },
-                { title: "باقة الجمال المتكامل", price: "222 ريال", items: ["باديكير ومانيكير", "لون أظافر مميز", "تصفيف شعر (ويفي أو سيشوار)"], img: "/images/IMG_6541.jpg", wa: "https://wa.me/966506866088?text=مرحباً، أرغب بحجز باقة الجمال المتكامل (222 ريال)", popular: true },
-                { title: "باقة التألق للمناسبات", price: "333 ريال", items: ["ميك آب ناعم", "تسريحة شعر ناعمة", "باديكير"], img: "/images/IMG_6557.jpg", wa: "https://wa.me/966506866088?text=مرحباً، أرغب بحجز باقة التألق للمناسبات (333 ريال)", popular: false },
+                { title: "باقة الاسترخاء الملكي", price: "222 ريال", items: ["حمام مغربي ملكي", "جلسة مساج للاسترخاء", "سيشوار للشعر"], img: "/images/image.png", wa: "https://wa.me/966506866088?text=مرحباً، أرغب بحجز باقة الاسترخاء الملكي (222 ريال)", popular: false, imgClass: "w-full h-full object-cover scale-110 hover:scale-125 transition-transform duration-700" },
+                { title: "باقة الجمال المتكامل", price: "222 ريال", items: ["باديكير ومانيكير", "لون أظافر مميز", "تصفيف شعر (ويفي أو سيشوار)"], img: "/images/IMG_6541.jpg", wa: "https://wa.me/966506866088?text=مرحباً، أرغب بحجز باقة الجمال المتكامل (222 ريال)", popular: true, imgClass: "w-full h-full object-cover -rotate-90 scale-150 hover:scale-[1.6] transition-transform duration-700" },
+                { title: "باقة التألق للمناسبات", price: "333 ريال", items: ["ميك آب ناعم", "تسريحة شعر ناعمة", "باديكير"], img: "/images/IMG_6557.jpg", wa: "https://wa.me/966506866088?text=مرحباً، أرغب بحجز باقة التألق للمناسبات (333 ريال)", popular: false, imgClass: "w-full h-full object-cover -rotate-90 scale-150 hover:scale-[1.6] transition-transform duration-700" },
               ].map((pkg, i) => (
                 <div key={i} className={`bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col ${pkg.popular ? "border-2 border-[#A5A364] transform md:-translate-y-4 relative" : "border border-[#EAEaea]"}`}>
                   {pkg.popular && <div className="absolute top-4 left-4 bg-[#A5A364] text-white text-xs font-bold px-3 py-1 rounded-full z-10">الأكثر طلباً</div>}
                   <div className="h-72 overflow-hidden">
-                    <Image src={pkg.img} alt={pkg.title} width={400} height={300} className="w-full h-full object-cover -rotate-90 scale-150 hover:scale-[1.6] transition-transform duration-700" />
+                    <Image src={pkg.img} alt={pkg.title} width={400} height={300} className={pkg.imgClass} />
                   </div>
                   <div className="p-8 flex-1 flex flex-col">
                     <h3 className="text-2xl font-bold text-[#2C2C2C] mb-2">{pkg.title}</h3>
