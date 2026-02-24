@@ -13,6 +13,7 @@ import {
   Facebook,
   X,
   Loader2,
+  Mail,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -576,6 +577,13 @@ export default function Home() {
                     <div>
                       <h4 className="font-bold text-lg mb-1">للتواصل</h4>
                       <p className="text-gray-600" dir="ltr">0506866088</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <Mail className="w-6 h-6 text-[#A5A364] mt-1 shrink-0" />
+                    <div>
+                      <h4 className="font-bold text-lg mb-1">البريد الإلكتروني</h4>
+                      <a href="mailto:info@soulmatebeautysalon.com" className="text-gray-600 hover:text-[#A5A364] transition-colors">info@soulmatebeautysalon.com</a>
                     </div>
                   </div>
                 </div>
