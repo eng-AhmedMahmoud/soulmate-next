@@ -381,7 +381,7 @@ export default function Home() {
           </div>
           <div className="relative">
             <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
-              <Image src="/images/IMG_6540.jpg" alt="Soul Mate Salon Interior" width={600} height={700} className="w-full h-[600px] object-cover -rotate-90 scale-120 hover:scale-[1.3c] transition-transform duration-700" priority />
+              <Image src="/images/IMG_6540.jpg" alt="Soul Mate Salon Interior" width={600} height={700} className="w-full h-[600px] object-cover scale-120 hover:scale-[1.3c] transition-transform duration-700" priority />
             </div>
             <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#ECE5D6] rounded-full z-0 opacity-50 blur-2xl" />
             <div className="absolute -top-10 -left-10 w-60 h-60 bg-[#A5A364] rounded-full z-0 opacity-20 blur-3xl" />
