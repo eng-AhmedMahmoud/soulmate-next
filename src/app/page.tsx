@@ -318,7 +318,7 @@ export default function Home() {
       >
         <div className="container mx-auto px-4 flex justify-between items-center">
           <Image src="/images/soulmate-logo.png" alt="SOUL MATE" width={240} height={70} className="h-20 w-auto object-contain" priority />
-          <div className="flex gap-4 items-center">
+          <div className="flex gap-2 md:gap-4 items-center">
             <a
               href="https://www.instagram.com/soulmate.ksa?igsh=MTZlcWc1dTMwbW5raA=="
               target="_blank"
@@ -339,7 +339,7 @@ export default function Home() {
               href="https://wa.me/966506866088"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#5C5B3E] text-[#5C5B3E] hover:bg-[#5C5B3E] hover:text-white transition-colors rounded-full px-6 py-2 text-sm font-medium"
+              className="border border-[#5C5B3E] text-[#5C5B3E] hover:bg-[#5C5B3E] hover:text-white transition-colors rounded-full px-3 py-1 text-xs md:px-6 md:py-2 md:text-sm font-medium"
             >
               احجزي الآن
             </a>
