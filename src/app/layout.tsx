@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: "SOUL MATE | Beauty Salon & Spa",
   description:
     "صفحة هبوط لصالون وسبا SOUL MATE الفاخر في الدمام، مصممة لجذب عميلات جديدات وزيادة الحجوزات.",
+  icons: {
+    icon: "/images/soulmate-logo-fav.png",
+    apple: "/images/soulmate-logo-fav.png",
+  },
   openGraph: {
     type: "website",
     title: "SOUL MATE | Beauty Salon & Spa",

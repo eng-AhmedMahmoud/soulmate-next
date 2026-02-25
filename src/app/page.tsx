@@ -227,7 +227,7 @@ function MapEmbed() {
       )}
       {inView && (
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.8!2d50.1211005!3d26.4400171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDI2JzI0LjEiTiA1MMKwMDcnMTYuMCJF!5e0!3m2!1sen!2ssa!4v1234567890"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3572.4872946332216!2d50.123675399999996!3d26.440017100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49fb74d33119a9%3A0x999399443dcc8d76!2zc291bG1hdGUgYmVhdXR5IHNhbG9uICYgc3BhINi12KfZhNmI2YYg2LPZiNmEINmF2YrYqiDZhNmE2KrYstmK2YrZhiDYp9mE2YbYs9in2KbZiiDZiNin2YTZhdiz2KfYrA!5e0!3m2!1sen!2seg!4v1772058840127!5m2!1sen!2seg"
           width="100%"
           height="100%"
           style={{ border: 0 }}
@@ -325,7 +325,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="text-[#5C5B3E] hover:text-[#A5A364] transition-colors"
             >
-              <Instagram className="w-6 h-6" />
+              <Instagram className="w-4 h-4 md:w-6 md:h-6" />
             </a>
             <a
               href="https://www.facebook.com/profile.php?id=61582868433794"
@@ -333,13 +333,13 @@ export default function Home() {
               rel="noopener noreferrer"
               className="text-[#5C5B3E] hover:text-[#A5A364] transition-colors"
             >
-              <Facebook className="w-6 h-6" />
+              <Facebook className="w-4 h-4 md:w-6 md:h-6" />
             </a>
             <a
               href="https://wa.me/966506866088"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#5C5B3E] text-[#5C5B3E] hover:bg-[#5C5B3E] hover:text-white transition-colors rounded-full px-3 py-1 text-xs md:px-6 md:py-2 md:text-sm font-medium"
+              className="border border-[#5C5B3E] text-[#5C5B3E] hover:bg-[#5C5B3E] hover:text-white transition-colors rounded-full px-1 py-1 text-xs md:px-6 md:py-2 md:text-sm font-medium"
             >
               احجزي الآن
             </a>
@@ -444,9 +444,9 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {[
-                { title: "باقة الاسترخاء الملكي", price: "222 ريال", items: ["حمام مغربي ملكي", "جلسة مساج للاسترخاء", "سيشوار للشعر"], img: "/images/image.png", wa: "https://wa.me/966506866088?text=مرحباً، أرغب بحجز باقة الاسترخاء الملكي (222 ريال)", popular: false, imgClass: "w-full h-full object-cover scale-110 hover:scale-125 transition-transform duration-700" },
-                { title: "باقة الجمال المتكامل", price: "222 ريال", items: ["باديكير ومانيكير", "لون أظافر مميز", "تصفيف شعر (ويفي أو سيشوار)"], img: "/images/IMG_6541.jpg", wa: "https://wa.me/966506866088?text=مرحباً، أرغب بحجز باقة الجمال المتكامل (222 ريال)", popular: true, imgClass: "w-full h-full object-cover -rotate-90 scale-150 hover:scale-[1.6] transition-transform duration-700" },
-                { title: "باقة التألق للمناسبات", price: "333 ريال", items: ["ميك آب ناعم", "تسريحة شعر ناعمة", "باديكير"], img: "/images/IMG_6557.jpg", wa: "https://wa.me/966506866088?text=مرحباً، أرغب بحجز باقة التألق للمناسبات (333 ريال)", popular: false, imgClass: "w-full h-full object-cover -rotate-90 scale-150 hover:scale-[1.6] transition-transform duration-700" },
+                { title: "باقة حمام فاخر", price: "500 ريال", items: ["حمام مغربي ملكي", "ماسك للشعر", "باديكير ومانيكير"], img: "/images/image.png", wa: "https://wa.me/966506866088?text=مرحباً، أرغب بحجز باقة حمام فاخر (500 ريال)", popular: false, imgClass: "w-full h-full object-cover scale-110 hover:scale-125 transition-transform duration-700" },
+                { title: "باقة حمام الصفاء", price: "500 ريال", items: ["حمام تنضيف عادي", "حمام عطور", "باديكير ومانيكير"], img: "/images/image copy.png", wa: "https://wa.me/966506866088?text=مرحباً، أرغب بحجز باقة حمام الصفاء (500 ريال)", popular: true, imgClass: "w-full h-full object-cover scale-110 hover:scale-125 transition-transform duration-700" },
+                { title: "باقة التألق للمناسبات", price: "500 ريال", items: ["تنضيف بشره عميق", "باديكير ومانيكير", "صبغه حواجب"], img: "/images/image copy 2.png", wa: "https://wa.me/966506866088?text=مرحباً، أرغب بحجز باقة التألق للمناسبات (500 ريال)", popular: false, imgClass: "w-full h-full object-cover scale-110 hover:scale-125 transition-transform duration-700" },
               ].map((pkg, i) => (
                 <div key={i} className={`bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col ${pkg.popular ? "border-2 border-[#A5A364] transform md:-translate-y-4 relative" : "border border-[#EAEaea]"}`}>
                   {pkg.popular && <div className="absolute top-4 left-4 bg-[#A5A364] text-white text-xs font-bold px-3 py-1 rounded-full z-10">الأكثر طلباً</div>}
@@ -486,11 +486,34 @@ export default function Home() {
                       <span className="text-[#A5A364] font-bold tracking-wider uppercase text-sm">باقة خاصة</span>
                     </div>
                     <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">رحلة البدايات المترفة</h3>
-                    <p className="text-gray-300 text-lg leading-relaxed mb-8">لأنكِ تستحقين تدليلاً استثنائياً في أهم أيام حياتك.. صممنا لكِ تجربة متكاملة تعتني بأدق تفاصيل جمالك وراحتك النفسية. من قمة رأسك حتى أخمص قدميك، دعينا نجهزك لتطلي كالملكة.</p>
+                    <div className="text-[#A5A364] font-bold text-2xl mb-4">عرض ٤٠٠ ريال</div>
+                    <ul className="space-y-3 mb-8">
+                      <li className="flex items-center text-gray-300 text-lg"><span className="w-2 h-2 bg-[#A5A364] rounded-full ml-3 shrink-0" />بشره</li>
+                      <li className="flex items-center text-gray-300 text-lg"><span className="w-2 h-2 bg-[#A5A364] rounded-full ml-3 shrink-0" />ديتوكس مراحل</li>
+                      <li className="flex items-center text-gray-300 text-lg"><span className="w-2 h-2 bg-[#A5A364] rounded-full ml-3 shrink-0" />سيشوار ويفي</li>
+                    </ul>
                     <a href="https://wa.me/966506866088?text=مرحباً، أنا عروس وأرغب بالاستفسار عن باقة رحلة البدايات المترفة" target="_blank" rel="noopener noreferrer" className="bg-[#A5A364] hover:bg-[#8F8D55] text-white text-lg px-10 py-3.5 rounded-full shadow-lg font-medium transition-colors w-full md:w-auto text-center">
                       احجزي استشارتك الخاصة
                     </a>
                   </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <div className="bg-[#2C2C2C] border border-[#A5A364]/30 rounded-2xl p-8 text-center">
+                  <h4 className="text-xl font-bold text-[#A5A364] mb-6">خدمات منفردة</h4>
+                  <ul className="space-y-4">
+                    <li className="flex items-center justify-between text-gray-300 text-lg"><span>حمام الصفاء</span><span className="text-[#A5A364] font-bold">٢٠٠ ريال</span></li>
+                    <li className="flex items-center justify-between text-gray-300 text-lg"><span>حمام ملكي</span><span className="text-[#A5A364] font-bold">٤٠٠ ريال</span></li>
+                    <li className="flex items-center justify-between text-gray-300 text-lg"><span>حمام عطور</span><span className="text-[#A5A364] font-bold">٢٥٠ ريال</span></li>
+                  </ul>
+                </div>
+                <div className="bg-[#2C2C2C] border border-[#A5A364]/30 rounded-2xl p-8 text-center">
+                  <h4 className="text-xl font-bold text-[#A5A364] mb-6">تريتمنت الشعر</h4>
+                  <ul className="space-y-4">
+                    <li className="flex items-center justify-between text-gray-300 text-lg"><span>الشعر القصير</span><span className="text-[#A5A364] font-bold">٧٠٠ ريال</span></li>
+                    <li className="flex items-center justify-between text-gray-300 text-lg"><span>الشعر المتوسط</span><span className="text-[#A5A364] font-bold">٩٠٠ ريال</span></li>
+                    <li className="flex items-center justify-between text-gray-300 text-lg"><span>الشعر الطويل</span><span className="text-[#A5A364] font-bold">١٢٠٠ ريال</span></li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -587,7 +610,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <a href="https://maps.app.goo.gl/example" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-[#2C2C2C] text-[#2C2C2C] hover:bg-[#2C2C2C] hover:text-white rounded-full px-8 py-3 font-medium transition-colors text-sm">
+                <a href="https://www.google.com/maps?ftid=0x3e49fb74d33119a9:0x999399443dcc8d76" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-[#2C2C2C] text-[#2C2C2C] hover:bg-[#2C2C2C] hover:text-white rounded-full px-8 py-3 font-medium transition-colors text-sm">
                   <MapPin size={18} />
                   افتحي الموقع في Google Maps
                 </a>
