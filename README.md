@@ -29,8 +29,18 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Hosting
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Production is a static export (`output: "export"` in `next.config.ts`) on the
+Cloudflare Pages project `soulmate-next` (https://soulmate-next.pages.dev),
+serving `www.soulmatebeautysalon.com` through a CNAME at Hostinger. The bare
+`soulmatebeautysalon.com` points at the Devya VPS, which answers with a 301 to
+`https://www.soulmatebeautysalon.com`, because Pages cannot serve an apex domain
+whose DNS is outside Cloudflare. The site left Vercel after the account pause of
+2026-11-13.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Merge gate: Jenkins `continuous-integration/jenkins/pr-head`, which runs
+  `bash scripts/ci-local.sh` (lint, build). Run the same script locally when
+  Jenkins is down.
+- Deploy: `npm run deploy` (`scripts/deploy.sh`) from a clean `main`. A push
+  does not deploy.
