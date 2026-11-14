@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "bash scripts/deploy.sh",
+    "ci": "bash scripts/ci-local.sh"
   },
   "dependencies": {
     "lucide-react": "^0.575.0",
