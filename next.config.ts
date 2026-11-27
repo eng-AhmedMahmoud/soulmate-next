@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-// Static export for Cloudflare Pages (scripts/deploy.sh uploads out/).
+// Static export served by nginx on the Devya VPS (scripts/deploy-vps.sh ships out/).
 const nextConfig: NextConfig = {
   output: "export",
   images: { unoptimized: true },
