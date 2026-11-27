@@ -31,16 +31,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Hosting
 
-Production is a static export (`output: "export"` in `next.config.ts`) on the
-Cloudflare Pages project `soulmate-next` (https://soulmate-next.pages.dev),
-serving `www.soulmatebeautysalon.com` through a CNAME at Hostinger. The bare
-`soulmatebeautysalon.com` points at the Devya VPS, which answers with a 301 to
-`https://www.soulmatebeautysalon.com`, because Pages cannot serve an apex domain
-whose DNS is outside Cloudflare. The site left Vercel after the account pause of
-2026-11-13.
+https://soulmate.devya.dev — the static export (`output: "export"` → `out/`) served by
+nginx on the Devya VPS (`/home/devya/projects/soulmate/current`, site
+`deploy/nginx/soulmate.conf`, TLS by certbot). It left Vercel after the account pause of
+2026-11-13 (Cloudflare Pages `soulmate-next.pages.dev` until 2026-11-27).
 
-- Merge gate: Jenkins `continuous-integration/jenkins/pr-head`, which runs
-  `bash scripts/ci-local.sh` (lint, build). Run the same script locally when
-  Jenkins is down.
-- Deploy: `npm run deploy` (`scripts/deploy.sh`) from a clean `main`. A push
-  does not deploy.
+- **Deploy:** `bash scripts/deploy-vps.sh` builds origin/main on the Mac (nothing builds
+  on the VPS), ships `out/` to `releases/<sha>` and points `current` at it. First time:
+  `--setup` installs the nginx site and the certificate.
+- **Client domain:** `www.soulmatebeautysalon.com` and `soulmatebeautysalon.com` are in the
+  client's Hostinger account and still point at the paused Vercel team. To serve them from
+  here, the client sets `A @ 72.61.81.59` and `A www 72.61.81.59` (TTL 300); the VPS
+  already 301s the bare domain to www, the nginx site already answers for www, and
+  `pending-certs` issues its certificate within 15 minutes of the record resolving.
+- **Merge gate:** Jenkins `continuous-integration/jenkins/pr-head`, which runs
+  `bash scripts/ci-local.sh` (lint, build). Run the same script locally when Jenkins is down.
